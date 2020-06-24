@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { theme } from "../../styles/global";
 
@@ -14,7 +15,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoContainer = styled(Link)``;
 
 export const NavContainer = styled.ul`
   display: flex;
@@ -27,7 +28,7 @@ export const NavOption = styled.li`
   font-weight: 700;
 `;
 
-export const NavButton = styled.button`
+export const NavButton = styled(Link)`
   padding: 0.4rem 1.2rem;
   border: 0;
   border-radius: 5px;
