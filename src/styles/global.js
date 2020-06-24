@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const theme = {
   primary: "#ea4c4c",
@@ -9,6 +9,10 @@ export const theme = {
   secondaryDark: "#081b26",
   white: "#f9f9f9",
 };
+
+export const Wrapper = styled.div`
+  width: 100%;
+`;
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
