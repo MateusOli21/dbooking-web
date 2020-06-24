@@ -28,15 +28,15 @@ export const NavOption = styled.li`
 `;
 
 export const NavButton = styled.button`
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1.2rem;
   border: 0;
   border-radius: 5px;
-  background: ${theme.secondary};
+  background: ${theme.primary};
   color: ${theme.white};
   font-weight: 700;
   margin-left: 0.25rem;
 
   &:hover {
-    background: ${theme.secondaryDark};
+    background: ${theme.primaryDark};
   }
 `;
