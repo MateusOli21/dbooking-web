@@ -25,8 +25,8 @@ export default function Home() {
         </SubSlogan>
 
         <ButtonsContainer>
-          <PrimaryButton>Faça login</PrimaryButton>
-          <SecondaryButton>Criar conta</SecondaryButton>
+          <PrimaryButton to="/signin">Faça login</PrimaryButton>
+          <SecondaryButton to="/signup">Criar conta</SecondaryButton>
         </ButtonsContainer>
       </SloganContainer>
 

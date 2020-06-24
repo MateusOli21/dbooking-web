@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { theme } from "../../styles/global";
 
@@ -87,7 +88,7 @@ export const SubSlogan = styled.p`
 
 export const ButtonsContainer = styled.div``;
 
-export const PrimaryButton = styled.button`
+export const PrimaryButton = styled(Link)`
   padding: 0.4rem 0.65rem;
   border: 0;
   margin-right: 0.5rem;
@@ -105,7 +106,7 @@ export const PrimaryButton = styled.button`
   }
 `;
 
-export const SecondaryButton = styled.button`
+export const SecondaryButton = styled(Link)`
   padding: 0.4rem 0.65rem;
   margin-right: 0.5rem;
   border: 1px solid ${theme.secondary};
