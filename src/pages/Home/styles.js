@@ -5,7 +5,6 @@ import { theme } from "../../styles/global";
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
   padding: 0 2rem;
 
   @media (min-width: 660px) {
