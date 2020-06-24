@@ -1,9 +1,38 @@
 import React from "react";
 
+import DinnerImg from "../../assets/dinner.svg";
+
+import {
+  Wrapper,
+  ImgContainer,
+  Img,
+  SloganContainer,
+  MainSlogan,
+  SubSlogan,
+  ButtonsContainer,
+  PrimaryButton,
+  SecondaryButton,
+} from "./styles";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Home page</h1>
-    </div>
+    <Wrapper>
+      <SloganContainer>
+        <MainSlogan>Não perca tempo esperando pelo seu jantar.</MainSlogan>
+        <SubSlogan>
+          Agende seu jantar presencialmente de forma rápida e prática ou peça
+          pelo delivery.
+        </SubSlogan>
+
+        <ButtonsContainer>
+          <PrimaryButton>Faça login</PrimaryButton>
+          <SecondaryButton>Criar conta</SecondaryButton>
+        </ButtonsContainer>
+      </SloganContainer>
+
+      <ImgContainer>
+        <Img src={DinnerImg} alt="dinner" />
+      </ImgContainer>
+    </Wrapper>
   );
 }
