@@ -36,6 +36,10 @@ export const Img = styled.img`
   }
 
   @media (min-width: 1024px) {
+    width: 480px;
+  }
+
+  @media (min-width: 1280px) {
     width: 600px;
   }
 `;
@@ -71,17 +75,24 @@ export const MainSlogan = styled.h1`
 export const SubSlogan = styled.p`
   font-size: 0.85rem;
   width: 75%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
   color: ${theme.secondary};
 
   @media (min-width: 768px) {
-    font-size: 1rem;
     width: 65%;
+    margin-bottom: 2.25rem;
+    font-size: 1rem;
   }
 
   @media (min-width: 1024px) {
-    width: 55%;
-    margin-bottom: 1.25rem;
+    width: 70%;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 1280px) {
+    width: 65%;
+    margin-bottom: 3rem;
   }
 `;
 
