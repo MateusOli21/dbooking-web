@@ -17,15 +17,19 @@ export const Wrapper = styled.div`
 
 export const LogoContainer = styled(Link)``;
 
-export const NavContainer = styled.ul`
+export const NavContainer = styled.div`
   display: flex;
   align-items: center;
 `;
 
-export const NavOption = styled.li`
+export const NavOption = styled(Link)`
   color: ${theme.white};
   margin-left: 1rem;
   font-weight: 700;
+
+  @media (max-width: 540px) {
+    display: ${({ isfixed }) => (isfixed === "true" ? "inline" : "none")};
+  }
 `;
 
 export const NavButton = styled(Link)`
@@ -35,7 +39,7 @@ export const NavButton = styled(Link)`
   background: ${theme.primary};
   color: ${theme.white};
   font-weight: 700;
-  margin-left: 0.25rem;
+  margin-left: 1rem;
 
   &:hover {
     background: ${theme.primaryDark};

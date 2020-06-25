@@ -18,12 +18,12 @@ export default function Dashboard() {
       <PageTitle>Você deseja...</PageTitle>
 
       <ImgContainer>
-        <ImgCard>
+        <ImgCard to="/booking">
           <Img src={BookingImg} alt="booking" />
           <ImgTitle>Fazer uma reserva</ImgTitle>
         </ImgCard>
 
-        <ImgCard>
+        <ImgCard to="/delivery">
           <Img src={DeliveryImg} alt="delivery" />
           <ImgTitle>Fazer uma reserva</ImgTitle>
         </ImgCard>

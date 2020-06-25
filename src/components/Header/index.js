@@ -23,21 +23,19 @@ export default function Header({ isAuth }) {
       <NavContainer>
         {isAuth ? (
           <>
-            <NavOption>Home</NavOption>
-            <NavOption>Reserva</NavOption>
-            <NavOption>Delivery</NavOption>
-            <NavOption>
-              <NavButton>Sair</NavButton>
+            <NavOption to="/dashboard" isfixed="true">
+              Home
             </NavOption>
+            <NavOption to="/booking">Reserva</NavOption>
+            <NavOption to="/delivery">Delivery</NavOption>
+            <NavButton to="/">Sair</NavButton>
           </>
         ) : (
-          <NavOption>
-            <NavButton
-              to={location.pathname === "/signin" ? "/signup" : "/signin"}
-            >
-              {location.pathname === "/signin" ? "Criar conta" : "Entrar"}
-            </NavButton>
-          </NavOption>
+          <NavButton
+            to={location.pathname === "/signin" ? "/signup" : "/signin"}
+          >
+            {location.pathname === "/signin" ? "Criar conta" : "Entrar"}
+          </NavButton>
         )}
       </NavContainer>
     </Wrapper>
