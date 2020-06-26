@@ -29,6 +29,11 @@ export const PageTitle = styled.h1`
   color: ${theme.white};
 `;
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const InputLabel = styled.label`
   font-weight: 100;
   margin-bottom: 0.25rem;
