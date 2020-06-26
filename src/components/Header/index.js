@@ -1,5 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+
 import { useLocation } from "react-router-dom";
+
+import { signOut } from "../../store/modules/auth/actions";
 
 import Logo from "../../assets/logo.svg";
 
@@ -9,10 +13,16 @@ import {
   NavContainer,
   NavOption,
   NavButton,
+  LogOutButton,
 } from "./styles";
 
 export default function Header({ isAuth }) {
   const location = useLocation();
+  const dispatch = useDispatch();
+
+  function handleLogOut() {
+    dispatch(signOut());
+  }
 
   return (
     <Wrapper isAuth={isAuth}>
@@ -28,7 +38,7 @@ export default function Header({ isAuth }) {
             </NavOption>
             <NavOption to="/booking">Reserva</NavOption>
             <NavOption to="/delivery">Delivery</NavOption>
-            <NavButton to="/">Sair</NavButton>
+            <LogOutButton onClick={handleLogOut}>Sair</LogOutButton>
           </>
         ) : (
           <NavButton

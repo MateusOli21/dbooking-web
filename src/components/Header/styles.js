@@ -45,3 +45,17 @@ export const NavButton = styled(Link)`
     background: ${theme.primaryDark};
   }
 `;
+
+export const LogOutButton = styled.button`
+  padding: 0.4rem 1.2rem;
+  border: 0;
+  border-radius: 5px;
+  background: ${theme.primary};
+  color: ${theme.white};
+  font-weight: 700;
+  margin-left: 1rem;
+
+  &:hover {
+    background: ${theme.primaryDark};
+  }
+`;

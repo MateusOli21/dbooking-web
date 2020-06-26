@@ -23,6 +23,11 @@ export const LoginContainer = styled.div`
   background: ${theme.primary};
 `;
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const PageTitle = styled.h1`
   color: ${theme.secondaryDark};
   margin-bottom: 1.5rem;
