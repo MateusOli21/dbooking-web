@@ -35,8 +35,8 @@ export const Form = styled.form`
 `;
 
 export const InputLabel = styled.label`
-  font-weight: 100;
   margin-bottom: 0.25rem;
+  font-size: 14px;
   color: ${theme.white};
 `;
 
@@ -45,8 +45,12 @@ export const InputField = styled.input`
   border: 1px solid ${theme.primary};
   border-radius: 5px;
   background: ${theme.primaryLight};
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: ${theme.white};
+
+  &:focus {
+    border: 1px solid ${theme.secondaryLight};
+  }
 `;
 
 export const SignInButton = styled.button`

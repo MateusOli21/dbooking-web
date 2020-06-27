@@ -16,7 +16,6 @@ export const Wrapper = styled.div`
 `;
 
 export default createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 
 * {
   margin: 0;

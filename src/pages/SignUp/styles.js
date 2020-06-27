@@ -35,7 +35,7 @@ export const PageTitle = styled.h1`
 `;
 
 export const InputLabel = styled.label`
-  font-weight: 100;
+  font-size: 14px;
   margin-bottom: 0.25rem;
   color: ${theme.white};
 `;
@@ -45,8 +45,12 @@ export const InputField = styled.input`
   border: 1px solid ${theme.primary};
   border-radius: 5px;
   background: ${theme.primaryLight};
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: ${theme.white};
+
+  &:focus {
+    border: 1px solid ${theme.secondaryLight};
+  }
 `;
 
 export const SignUpButton = styled.button`

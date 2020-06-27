@@ -35,8 +35,8 @@ export const Img = styled.img`
     width: 340px;
   }
 
-  @media (min-width: 1024px) {
-    width: 480px;
+  @media (min-width: 1080px) {
+    width: 440px;
   }
 
   @media (min-width: 1280px) {
@@ -56,18 +56,17 @@ export const MainSlogan = styled.h1`
   color: ${theme.secondary};
 
   @media (min-width: 768px) {
-    font-size: 40px;
-    width: 80%;
+    font-size: 36px;
+    width: 95%;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1080px) {
     font-size: 48px;
-    width: 80%;
+    width: 90%;
     margin-bottom: 0.75rem;
   }
 
   @media (min-width: 1250px) {
-    font-size: 56px;
     width: 80%;
   }
 `;
@@ -87,7 +86,6 @@ export const SubSlogan = styled.p`
   @media (min-width: 1024px) {
     width: 70%;
     margin-bottom: 3rem;
-    font-size: 1.2rem;
   }
 
   @media (min-width: 1280px) {
