@@ -1,4 +1,5 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
+import { toast } from "react-toastify";
 
 import api from "../../../services/api";
 import history from "../../../services/history";
@@ -27,8 +28,10 @@ export function* signUp({ payload }) {
 
     yield call(api.post, "users", { username, email, password });
 
+    toast.success("Conta criada com sucesso. Faça login na aplicação");
     history.push("/signin");
   } catch (err) {
+    toast.error("Erro ao tentar criar conta.");
     yield put(signFailure());
   }
 }

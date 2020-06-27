@@ -1,3 +1,4 @@
+import "react-toastify/dist/ReactToastify.css";
 import styled, { createGlobalStyle } from "styled-components";
 
 export const theme = {
