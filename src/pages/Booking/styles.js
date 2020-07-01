@@ -14,7 +14,11 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media (min-width: 1150px) {
+    justify-content: space-between;
+  }
 `;
 
 export const PageTitle = styled.h1`
@@ -32,11 +36,18 @@ export const DateContainer = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 480px;
+  margin-bottom: 1.5rem;
 `;
 
 export const InputLabel = styled.label`
   color: ${theme.secondaryDark};
   margin-bottom: 0.75rem;
+  font-weight: bolder;
+`;
+
+export const ResumeText = styled.span`
+  color: ${theme.secondaryDark};
+  margin-bottom: 0.25rem;
 `;
 
 export const DatePicker = styled.input`
@@ -48,7 +59,7 @@ export const DatePicker = styled.input`
   background: ${theme.primary};
 
   @media (min-width: 760px) {
-    margin: 0rem 0 2.5rem;
+    margin: 0rem 0 2rem;
   }
 `;
 
@@ -60,17 +71,22 @@ export const HourContainer = styled.div`
 
 export const Hour = styled.div`
   width: 100%;
-  max-width: 95px;
+  max-width: 80px;
   text-align: center;
   padding: 0.8rem 0;
-  margin: 0.5rem 0rem;
+  margin: 0 0 0.5rem;
   margin-right: 0.5rem;
   border-radius: 5px;
-  background: ${theme.primary};
+  background: ${({ selected }) =>
+    selected ? theme.primaryDark : theme.primary};
 
   &:hover {
     cursor: pointer;
     background: ${theme.primaryLight};
+  }
+
+  @media (min-width: 520px) {
+    max-width: 95px;
   }
 `;
 
@@ -80,15 +96,19 @@ export const HoutText = styled.span`
 
 export const TableContainer = styled.div`
   width: 100%;
-  max-width: 540px;
+  max-width: 480px;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1100px) {
+    max-width: 520px;
+  }
 `;
 
 export const Tables = styled.div`
   max-width: 540px;
-  height: 280px;
+  height: 320px;
   display: grid;
   grid-template-columns: repeat(4, minmax(50px, 1fr));
   gap: 0.5rem;
@@ -103,11 +123,16 @@ export const Tables = styled.div`
 `;
 
 export const Table = styled.img`
-  max-width: 80px;
-  opacity: ${({ available }) => (available ? 1 : 0.6)};
+  max-width: 65px;
+  opacity: ${({ available }) => (available ? 1 : 0.5)};
+  pointer-events: ${({ available }) => (available ? "auto" : "none")};
 
   &:hover {
-    cursor: pointer;
+    cursor: ${({ available }) => (available ? "pointer" : "default")};
+  }
+
+  @media (min-width: 520px) {
+    max-width: 80px;
   }
 `;
 
